@@ -7,15 +7,15 @@ function setDate() {
 
   const seconds = now.getSeconds();
   const secondsDegrees = (seconds / 60) * 360 + 90; // to offset default 90 degrees
-  secondHand.style.transform = `rotate(${secondsDegrees})`;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   const minutes = now.getMinutes();
   const minutesDegrees = (minutes / 60) * 360 + 90;
-  minuteHand.style.transform = `rotate(${minutesDegrees})`;
+  minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
   const hours = now.getHours();
   const hoursDegrees = (hours / 12) * 360 + 90;
-  hourHand.style.transform = `rotate(${hoursDegrees})`;
+  hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 }
 
 setInterval(setDate, 1000);
